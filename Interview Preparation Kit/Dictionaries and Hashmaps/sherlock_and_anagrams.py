@@ -12,8 +12,7 @@ def sherlockAndAnagrams(s):
             x = ''.join(sorted(s[i:window_size+i]))
             pairs.append(x)
         for v in Counter(pairs).values():
-            if v > 1:
-                counter += v*(v-1)//2
+            counter += v*(v-1)//2
         window_size += 1
     return counter
 
